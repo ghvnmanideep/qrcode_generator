@@ -1,0 +1,109 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator Application</title>
+    <link rel="icon" href="static/images/icon.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            color: #ffffff;
+            padding: 50px;
+            background-color: #007BFF;
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 2px 5px rgba(24, 193, 5, 0.2);
+        }
+        label {
+            font-size: 24px;
+            color: #dc3545;
+        }
+        textarea {
+            width: 60%;
+            height: 170px;
+            background-color: #343a40;
+            color: #ffffff;
+            border: 2px solid #28a745;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 18px;
+        }
+        textarea::placeholder {
+            color: #adb5bd;
+        }
+        #button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #18d832;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+        #button:hover {
+            background-color: #5c14c0;
+        }
+        footer {
+            background-color: #007BFF;
+            font-family: cursive;
+            font-size: 20px;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 25px;
+            margin-top: 20px;
+            box-shadow: 0 -2px 5px 5px 50 rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>QR CODE APPLICATION</h1>
+        <p>You can input your desired information and customize your QR code by 
+            selecting your preferred color and size to create a unique code tailored to your needs.</p>
+        <form method="post" action="/qrcode">
+            <div>
+                <label for="data">Enter your data to generate QR code: <br>
+                    <textarea id="data" name="data" placeholder="Enter your data to Generate QR Code" required></textarea>
+                </label><br>
+            </div>
+            <div>
+                {% if img_path %}
+                    <img src="{{ img_path }}" alt="QR Code" />
+                {% endif %}
+            </div>
+            <button type="submit" id="button">Generate QR Code</button>
+            {% if img_path %}
+                <a href="/download" id="button">Download QR Code</a>
+            {% endif %}
+        </form>
+        {% if msg %}
+            <p>{{ msg }}</p>
+        {% endif %}
+    </center>  
+    <footer>
+        Designed by Manideep Gattupalli
+    </footer>
+</body>
+</html>

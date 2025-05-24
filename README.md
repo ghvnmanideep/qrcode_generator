@@ -24,5 +24,5 @@
 🌍 Eco-Friendly: Promotes digital solutions, reducing the need for printed materials and contributing to sustainability.
 
 ✨ Simplified Experience: Overall, the application simplifies the QR code generation process, making it approachable for everyone!
-
+  
 

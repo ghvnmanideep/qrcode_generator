@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/13591052-6884-46b3-9cdc-35d54d97355f
+
 ***************    QR CODE GENERATOR APPLICATION     *********************
 🌐 Web Framework: Built using Flask, a lightweight and powerful Python web framework for easy backend handling.
 

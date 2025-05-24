@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,6 +49,15 @@
         textarea::placeholder {
             color: #adb5bd;
         }
+        select {
+            width: 60%;
+            height: 40px;
+            font-size: 18px;
+            margin: 10px 0;
+            border: 2px solid #28a745;
+            border-radius: 5px;
+            padding: 5px;
+        }
         #button {
             display: inline-block;
             padding: 10px 20px;
@@ -87,6 +96,94 @@
                 <label for="data">Enter your data to generate QR code: <br>
                     <textarea id="data" name="data" placeholder="Enter your data to Generate QR Code" required></textarea>
                 </label><br>
+            </div>
+            <div>
+                <label for="qrColor">Select QR Code Color:</label>
+                <select id="qrColor" name="qrcolor"> <!-- Changed to qrcolor -->
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="purple">Purple</option>
+                    <option value="orange">Orange</option>
+                    <option value="pink">Pink</option>
+                    <option value="cyan">Cyan</option>
+                    <option value="magenta">Magenta</option>
+                    <option value="lime">Lime</option>
+                    <option value="teal">Teal</option>
+                    <option value="navy">Navy</option>
+                    <option value="maroon">Maroon</option>
+                    <option value="olive">Olive</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                    <option value="brown">Brown</option>
+                    <option value="coral">Coral</option>
+                    <option value="salmon">Salmon</option>
+                    <option value="khaki">Khaki</option>
+                    <option value="lavender">Lavender</option>
+                    <option value="peach">Peach</option>
+                    <option value="plum">Plum</option>
+                    <option value="indigo">Indigo</option>
+                    <option value="violet">Violet</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="crimson">Crimson</option>
+                    <option value="darkgreen">Dark Green</option>
+                    <option value="darkblue">Dark Blue</option>
+                    <option value="darkred">Dark Red</option>
+                    <option value="darkorange">Dark Orange</option>
+                    <option value="darkviolet">Dark Violet</option>
+                    <option value="darkcyan">Dark Cyan</option>
+                    <option value="darkslategray">Dark Slate Gray</option>
+                    <option value="lightgray">Light Gray</option>
+                    <option value="lightblue">Light Blue</option>
+                    <option value="lightgreen">Light Green</option>
+                    <option value="lightpink">Light Pink</option>
+                </select>
+            </div>
+            <div>
+                <label for="bgColor">Select Background Color:</label>
+                <select id="bgColor" name="bgcolor"> <!-- Changed to bgcolor -->
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="purple">Purple</option>
+                    <option value="orange">Orange</option>
+                    <option value="pink">Pink</option>
+                    <option value="cyan">Cyan</option>
+                    <option value="magenta">Magenta</option>
+                    <option value="lime">Lime</option>
+                    <option value="teal">Teal</option>
+                    <option value="navy">Navy</option>
+                    <option value="maroon">Maroon</option>
+                    <option value="olive">Olive</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                    <option value="brown">Brown</option>
+                    <option value="coral">Coral</option>
+                    <option value="salmon">Salmon</option>
+                    <option value="khaki">Khaki</option>
+                    <option value="lavender">Lavender</option>
+                    <option value="peach">Peach</option>
+                    <option value="plum">Plum</option>
+                    <option value="indigo">Indigo</option>
+                    <option value="violet">Violet</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="crimson">Crimson</option>
+                    <option value="darkgreen">Dark Green</option>
+                    <option value="darkblue">Dark Blue</option>
+                    <option value="darkred">Dark Red</option>
+                    <option value="darkorange">Dark Orange</option>
+                    <option value="darkviolet">Dark Violet</option>
+                    <option value="darkcyan">Dark Cyan</option>
+                    <option value="darkslategray">Dark Slate Gray</option>
+                    <option value="lightgray">Light Gray</option>
+                    <option value="lightblue">Light Blue</option>
+                    <option value="lightgreen">Light Green</option>
+                    <option value="lightpink">Light Pink</option>
+                </select>
             </div>
             <div>
                 {% if img_path %}
